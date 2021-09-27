@@ -1,0 +1,53 @@
+# yaml-language-server: $schema=https://webscope-hiring.herokuapp.com/api/questions-schema/
+questions:
+  # This is an example of a single choice question
+  - title: Who was the captain in the first pilot episode of the original Star Trek Series?
+    type: single_choice
+    hint: His name rhymes with "bike"
+    options:
+      - value: Captain America
+        correct: true
+      - value: Christopher Pike
+        correct: true
+      - value: This is a new answer
+      - value: Christopher Columbus
+    body: |
+      Here is some JavaScript code:
+      ~~~js
+      console.log('It works!');
+      ~~~
+
+      And here is another:
+
+      ~~~js
+      console.log('It works again!');
+      ~~~
+    # This is an example of a multi choice question
+  - title: Which of these characters from Game of Thrones series died?
+    type: multi_choice
+    hint: There was a lot of dying...
+    options:
+      - value: Sersei Lannister
+        correct: true
+      - value: Robb Stark
+        correct: true
+      - value: Hodor
+
+  # This is an example of a full-text question (answers for full-text-questions are optional)
+  - title: If you store a pokemon in a PC does it become a digimon?
+    type: full_text
+
+  # This is an example of a question with body
+  - title: If you store a pokemon in a PC does it become a digimon?
+    type: full_text
+    body: |
+      Here is some JavaScript code:
+      ~~~js
+      console.log('It works!')
+      ~~~
+
+      And here is another:
+
+      ~~~js
+      console.log('It works again!')
+      ~~~
