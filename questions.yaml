@@ -1,53 +1,88 @@
-# yaml-language-server: $schema=https://webscope-hiring.herokuapp.com/api/questions-schema/
 questions:
-  # This is an example of a single choice question
-  - title: Who was the captain in the first pilot episode of the original Star Trek Series?
-    type: single_choice
-    hint: His name rhymes with "bike"
-    options:
-      - value: Captain America
-        correct: true
-      - value: Christopher Pike
-        correct: true
-      - value: This is a new answer
-      - value: Christopher Columbus
-    body: |
-      Here is some JavaScript code:
-      ~~~js
-      console.log('It works!');
-      ~~~
-
-      And here is another:
-
-      ~~~js
-      console.log('It works again!');
-      ~~~
-    # This is an example of a multi choice question
-  - title: Which of these characters from Game of Thrones series died?
+  - title: What's a correct way to access a DOM element in JavaScript?
     type: multi_choice
-    hint: There was a lot of dying...
     options:
-      - value: Sersei Lannister
+      - value: getElementById(idName)
         correct: true
-      - value: Robb Stark
+      - value: getElementsByClass(className)
         correct: true
-      - value: Hodor
+      - value: getElementByTagName(tagName)
+      - value: querySelector()
+        correct: true
 
-  # This is an example of a full-text question (answers for full-text-questions are optional)
-  - title: If you store a pokemon in a PC does it become a digimon?
+  - title: Which of the statements about "var" and "let" variables is correct?
+    type: single_choice
+    options:
+      - value: Variables of type "let" create a property on "global" object.
+      - value: Variables of type "var" are hoisted, while "let" variables are not.
+        correct: true
+      - value: Variables of type "var" are scoped to their immediate enclosing block.
+
+  - title: What's the difference between "===" and "==" equality operators?
+    type: multi_choice
+    options:
+      - value: Operator "===" performs deep equality check, while "==" performs shallow equality check.
+      - value: Both operators are the same.
+      - value: Operator "==" performs type coercion before the equality check, while "===" does not.
+        correct: true
+
+  - title: Which of these expressions return NaN?
+    type: multi_choice
+    options:
+      - value: Number("1")
+      - value: Number("Number")
+        correct: true
+      - value: 1 + "1"
+      - value: parseInt("'1'")
+        correct: true
+
+  - title: What's the dirrence between "null" and "undefiend" in JavaScript?
     type: full_text
 
-  # This is an example of a question with body
-  - title: If you store a pokemon in a PC does it become a digimon?
-    type: full_text
+  - title: What does the following snippet log into the console?
+    type: single_choice
     body: |
-      Here is some JavaScript code:
-      ~~~js
-      console.log('It works!')
+      ~~~javascript 
+      console.log('one');
+      setTimeout(function() {
+        console.log('two');
+      }, 0);
+      console.log('three');
       ~~~
+    options:
+      - value: one, two, three
+      - value: three, one, two
+      - value: one, three, two
+        correct: true
+      - value: two, one, three
 
-      And here is another:
+  - title: What are the pros and cons of using Promises instead of callbacks? What other options do we have to handle async in JavaScript?
+    type: full_text
 
-      ~~~js
-      console.log('It works again!')
+  - title: What is event bubbling in JavaScript?
+    type: "full_text"
+
+  - title: What does nullish-coalescing operator do?
+    type: multi_choice
+    options:
+      - value: It returns right-side operator in case left-side operator is undefined.
+        correct: true
+      - value: It returns right-side operator in case left-side operator is falsy.
+      - value: It returns right-side operator in case left-side operator is null.
+        correct: true
+      - value: It returns left-side operator in case right-side operator in undefined.
+
+  - title: Is following code-snippet ES6 correct? If it is, what does it perform?
+    body: |
+      ~~~javascript
+      var x = "Foo";
+      var y = "Bar";
+      [x, y] = [y, x];
       ~~~
+    type: single_choice
+    options:
+      - value: The statement is correct. It creates a two-dimensional array.
+      - value: The statement is not correct.
+      - value: The statement is correct. It swaps values of variables x and y.
+        correct: true
+      - value: The statement is correct. It does nothing at all though.
