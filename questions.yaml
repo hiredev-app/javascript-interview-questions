@@ -36,7 +36,7 @@ questions:
       - value: parseInt("'1'")
         correct: true
 
-  - title: What's the dirrence between "null" and "undefiend" in JavaScript?
+  - title: What's the difference between "null" and "undefined" in JavaScript?
     type: full_text
 
   - title: What does the following snippet log into the console?
