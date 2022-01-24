@@ -70,7 +70,7 @@ questions:
       - value: It returns right-side operator in case left-side operator is falsy.
       - value: It returns right-side operator in case left-side operator is null.
         correct: true
-      - value: It returns left-side operator in case right-side operator in undefined.
+      - value: It returns left-side operator in case right-side operator is undefined.
 
   - title: Is following code-snippet ES6 correct? If it is, what does it perform?
     body: |
